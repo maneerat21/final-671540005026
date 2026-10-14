@@ -1,11 +1,14 @@
+name: final-671540005026
+
 services:
   menu:
     build: .
-    image: ksu-menu:1.0
     ports:
-      - "8081:80"
+      - "8090:80"
+    restart: unless-stopped
 
   promo:
     image: kamthornsa/ksu-promo:1.0
     ports:
-      - "8082:3000"
+      - "8091:3000"
+    restart: unless-stopped
